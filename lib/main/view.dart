@@ -10,7 +10,6 @@ Widget buildView(MainState state, Dispatch dispatch, ViewService viewService) {
   return Scaffold(
     body: state.currentPage,
     floatingActionButton: FloatingActionButton(
-      backgroundColor: Theme.of(viewService.context).primaryColor,
       child: Icon(
         Icons.add,
         color: Colors.white,
@@ -22,7 +21,7 @@ Widget buildView(MainState state, Dispatch dispatch, ViewService viewService) {
     bottomNavigationBar: CustomBottomBar(
       dockIndex: 1,
       currentIndex: state.currentIndex,
-      labelColor: Theme.of(viewService.context).accentColor,
+      labelColor: Theme.of(viewService.context).primaryColor,
       unLabelColor: Theme.of(viewService.context).unselectedWidgetColor,
       items: [
         BottomNavigationBarItem(

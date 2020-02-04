@@ -5,7 +5,7 @@ import 'state.dart';
 
 Widget buildView(InfoState state, Dispatch dispatch, ViewService viewService) {
   return SingleChildScrollView(
-    child: Row(
+    child: Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         Container(
@@ -18,6 +18,11 @@ Widget buildView(InfoState state, Dispatch dispatch, ViewService viewService) {
             child: Column(
               children: <Widget>[],
             ),
+          ),
+        ),
+        FlatButton(
+          child: Container(
+
           ),
         )
       ],
