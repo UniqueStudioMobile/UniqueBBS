@@ -13,9 +13,9 @@ class BBSRoute {
 
   static final login = 'login'; // 登录
 
-  static final reportList = 'reportList'; // 帖子列表：首页-情报-通知公告、首页-我的-我的帖子
-  static final reportDetail = 'reportDetail'; // 帖子详情
-  static final postReport = 'postReport'; // 发帖
+  static final postList = 'postList'; // 帖子列表：首页-情报-通知公告、首页-我的-我的帖子
+  static final postDetail = 'postDetail'; // 帖子详情
+  static final posting = 'postReport'; // 发帖
 
   static final me = 'me'; // 我的
   static final userDetail = 'userDetail'; // 用户信息

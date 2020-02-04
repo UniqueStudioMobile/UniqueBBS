@@ -21,9 +21,7 @@ Widget buildView(InfoState state, Dispatch dispatch, ViewService viewService) {
           ),
         ),
         FlatButton(
-          child: Container(
-
-          ),
+          child: Container(),
         )
       ],
     ),
