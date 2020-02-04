@@ -43,16 +43,16 @@ Widget buildView(HomeState state, Dispatch dispatch, ViewService viewService) {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   IconButton(
-                    icon: Icon(
-                      Icons.search,
+                    icon: ImageIcon(
+                      AssetImage(AssetResource.icHomeSearch),
                     ),
                     onPressed: () {
                       dispatch(HomeActionCreator.openSearch());
                     },
                   ),
                   IconButton(
-                    icon: Icon(
-                      Icons.notifications,
+                    icon: ImageIcon(
+                      AssetImage(AssetResource.icHomeMessage),
                     ),
                     onPressed: () {
                       dispatch(HomeActionCreator.openMessagePage());

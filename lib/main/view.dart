@@ -25,9 +25,9 @@ Widget buildView(MainState state, Dispatch dispatch, ViewService viewService) {
       unLabelColor: Theme.of(viewService.context).unselectedWidgetColor,
       items: [
         BottomNavigationBarItem(
-            icon: Icon(Icons.message), title: Text(StringResource.home)),
+            icon: ImageIcon(AssetImage(AssetResource.icHome)), title: Text(StringResource.home)),
         BottomNavigationBarItem(
-            icon: Icon(Icons.person), title: Text(StringResource.me))
+            icon: ImageIcon(AssetImage(AssetResource.icMe)), title: Text(StringResource.me))
       ],
       onTap: (index) {
         dispatch(MainActionCreator.selectPage(index));

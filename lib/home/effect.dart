@@ -1,7 +1,9 @@
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/widgets.dart' hide Action;
 import 'package:unique_bbs/config/route.dart';
+import 'package:unique_bbs/data/remote.dart';
 import 'package:unique_bbs/home/page.dart';
+import 'package:unique_bbs/data/bean/user_entity.dart';
 
 import 'action.dart';
 import 'state.dart';
