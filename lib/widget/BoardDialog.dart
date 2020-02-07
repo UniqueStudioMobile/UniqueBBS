@@ -2,25 +2,9 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:unique_bbs/config/resource.dart';
 import 'package:unique_bbs/config/route.dart';
 
 class BoardDialog extends ModalRoute<void> {
-  List<String> _boards = [
-    'report',
-    '通知\n公告',
-    '项目\n任务',
-    '新人\n任务',
-    '文件\n存留',
-    '知识\n分享',
-    '闲谈\n杂论',
-    '奇思\n妙想',
-    '联创\n趣梗',
-  ];
-
-  TextStyle boardTextStyle =
-      TextStyle(fontSize: 18, fontWeight: FontWeight.bold);
-
   @override
   Color get barrierColor => Colors.black.withOpacity(0.5);
 
@@ -51,7 +35,10 @@ class BoardDialog extends ModalRoute<void> {
   Widget _buildBoardDialogContent(BuildContext context) {
     return Center(
       child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
+        filter: ImageFilter.blur(
+          sigmaX: 5.0,
+          sigmaY: 5.0
+        ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
@@ -59,6 +46,17 @@ class BoardDialog extends ModalRoute<void> {
               '请先选择发帖板块',
               style: TextStyle(color: Colors.white, fontSize: 30.0),
             ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, BBSRoute.posting);
+              },
+              child: Text('我是板块'),
+            ),
+            RaisedButton(
+              onPressed: () => Navigator.pop(context),
+              child: Text('关闭'),
+            )
             Flexible(child: _buildBoardGridView()),
             SizedBox(
               width: 50,
