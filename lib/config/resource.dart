@@ -1,4 +1,11 @@
-class ColorResource {}
+import 'package:flutter/cupertino.dart';
+
+class ColorResource {
+  static const backgroundGray = Color(0xfffafafa);
+  static const backgroundWhite = Color(0xffffffff);
+  static const borderGray = Color(0xffe6e6e6);
+  static const textGray = Color(0xff999999);
+}
 
 class StringResource {
   static final info = '情报';

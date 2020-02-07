@@ -9,18 +9,26 @@ class BBSApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          accentColor: Color(0xff555555),
-          indicatorColor: Color(0xff7966ff),
-          primaryTextTheme:
-              TextTheme(body2: TextStyle(color: Color(0xff7966ff))),
-          iconTheme: IconThemeData(color: Color(0xff7966ff)),
-          primaryColor: Color(0xff7966ff),
-          primaryColorLight: Color(0xFFFFDFFD),
-          unselectedWidgetColor: Color(0xff999999)),
+        appBarTheme: AppBarTheme(
+          elevation: 0,
+          color: Color(0xfffafafa),
+          iconTheme: IconThemeData(
+            color: Color(0xff999999),
+          ),
+        ),
+        accentColor: Color(0xff555555),
+        indicatorColor: Color(0xff7966ff),
+        primaryTextTheme:
+        TextTheme(body2: TextStyle(color: Color(0xff7966ff))),
+        iconTheme: IconThemeData(color: Color(0xff7966ff)),
+        primaryColor: Color(0xff7966ff),
+        primaryColorLight: Color(0xFFFFDFFD),
+        unselectedWidgetColor: Color(0xff999999)),
       home: BBSRoute.buildPage(BBSRoute.main, null),
-      onGenerateRoute: (settings) => MaterialPageRoute(
+      onGenerateRoute: (settings) =>
+        MaterialPageRoute(
           builder: (context) =>
-              BBSRoute.buildPage(settings.name, settings.arguments)),
+            BBSRoute.buildPage(settings.name, settings.arguments)),
     );
   }
 }

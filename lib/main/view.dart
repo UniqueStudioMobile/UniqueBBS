@@ -15,7 +15,9 @@ Widget buildView(MainState state, Dispatch dispatch, ViewService viewService) {
         color: Colors.white,
         size: 35,
       ),
-      onPressed: () {},
+      onPressed: () {
+        dispatch(MainActionCreator.newPost());
+      },
     ),
     floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     bottomNavigationBar: CustomBottomBar(
