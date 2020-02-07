@@ -16,7 +16,7 @@ Widget buildView(MainState state, Dispatch dispatch, ViewService viewService) {
         size: 35,
       ),
       onPressed: () {
-        dispatch(MainActionCreator.newPost());
+        dispatch(MainActionCreator.selectBoard());
       },
     ),
     floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
