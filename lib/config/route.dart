@@ -2,6 +2,7 @@ import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/widgets.dart';
 import 'package:unique_bbs/home/page.dart';
 import 'package:unique_bbs/main/page.dart';
+import 'package:unique_bbs/post/page.dart';
 
 class BBSRoute {
   static final main = '/'; // 主页
@@ -24,7 +25,11 @@ class BBSRoute {
   static final message = 'message'; // 消息页面
 
   // TODO：页面完成在这里添加路由
-  static var routes = PageRoutes(pages: {main: MainPage(), home: HomePage()});
+  static var routes = PageRoutes(pages: {
+    main: MainPage(),
+    home: HomePage(),
+    posting: PostMainPage(),
+  });
 
   static Widget buildPage(String path, dynamic arg) =>
       routes.buildPage(path, arg);
