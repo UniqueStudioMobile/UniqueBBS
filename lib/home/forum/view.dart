@@ -5,10 +5,8 @@ import 'state.dart';
 
 Widget buildView(ForumState state, Dispatch dispatch, ViewService viewService) {
   ListAdapter adapter = viewService.buildAdapter();
-  return Container(
-    child: ListView.builder(
-      itemBuilder: adapter.itemBuilder,
-      itemCount: adapter.itemCount,
-    ),
+  return ListView.builder(
+    itemBuilder: adapter.itemBuilder,
+    itemCount: adapter.itemCount,
   );
 }
