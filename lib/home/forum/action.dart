@@ -1,10 +1,11 @@
 import 'package:fish_redux/fish_redux.dart';
 
-//TODO replace with your own action
-enum ForumAction { action }
+import 'item/state.dart';
+
+enum ForumAction { initForums }
 
 class ForumActionCreator {
-  static Action onAction() {
-    return const Action(ForumAction.action);
+  static Action initForumsAction(List<ItemState> forums) {
+    return Action(ForumAction.initForums, payload: forums);
   }
 }
