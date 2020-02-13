@@ -1,4 +1,5 @@
 import 'package:fish_redux/fish_redux.dart';
+import 'package:unique_bbs/home/forum/item/state.dart';
 
 import 'action.dart';
 import 'state.dart';
@@ -6,12 +7,14 @@ import 'state.dart';
 Reducer<ForumState> buildReducer() {
   return asReducer(
     <Object, Reducer<ForumState>>{
-      ForumAction.action: _onAction,
+      ForumAction.initForums: _initForums,
     },
   );
 }
 
-ForumState _onAction(ForumState state, Action action) {
+ForumState _initForums(ForumState state, Action action) {
+  final List<ItemState> items = action.payload ?? <ItemState>[];
   final ForumState newState = state.clone();
+  newState.items = items;
   return newState;
 }

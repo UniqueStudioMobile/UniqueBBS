@@ -1,4 +1,5 @@
 import 'package:fish_redux/fish_redux.dart';
+import 'package:unique_bbs/home/forum/adapter.dart';
 
 import 'effect.dart';
 import 'reducer.dart';
@@ -12,6 +13,7 @@ class ForumComponent extends Component<ForumState> {
           reducer: buildReducer(),
           view: buildView,
           dependencies: Dependencies<ForumState>(
-              adapter: null, slots: <String, Dependent<ForumState>>{}),
+              adapter: NoneConn<ForumState>() + ForumAdapter(),
+              slots: <String, Dependent<ForumState>>{}),
         );
 }

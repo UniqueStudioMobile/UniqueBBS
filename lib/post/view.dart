@@ -58,7 +58,7 @@ Widget buildView(
         ),
         KeyboardAction(
           focusNode: state.contentTextNode,
-          displayCloseWidget: false,
+//          displayCloseWidget: false,
         )
       ],
     );

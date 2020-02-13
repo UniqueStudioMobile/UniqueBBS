@@ -40,6 +40,9 @@ class InfoConn extends ConnOp<HomeState, InfoState> {
 class ForumConn extends ConnOp<HomeState, ForumState> {
   @override
   ForumState get(HomeState state) => ForumState();
+
+  @override
+  void set(HomeState state, ForumState subState) {}
 }
 
 class HomeTickerState extends ComponentState<HomeState>
