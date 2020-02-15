@@ -2,6 +2,7 @@ import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/widgets.dart';
 import 'package:unique_bbs/home/page.dart';
 import 'package:unique_bbs/main/page.dart';
+import 'package:unique_bbs/post/detail/page.dart';
 import 'package:unique_bbs/post/page.dart';
 
 class BBSRoute {
@@ -29,6 +30,7 @@ class BBSRoute {
     main: MainPage(),
     home: HomePage(),
     posting: PostMainPage(),
+    postDetail: PostDetailPage(),
   });
 
   static Widget buildPage(String path, dynamic arg) =>
