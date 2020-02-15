@@ -12,4 +12,7 @@ class StringResource {
   static final forum = '论坛';
   static final home = '首页';
   static final me = '我的';
+  static final edit = '编辑';
+  static final delete = '删除';
+  static final newComment = '最新评论';
 }
