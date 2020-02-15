@@ -24,5 +24,4 @@ void _openMessagePage(Action action, Context<HomeState> ctx) {
 }
 
 void _openSearch(Action action, Context<HomeState> ctx) {
-  Navigator.pushNamed(ctx.context, BBSRoute.postDetail, arguments: { "data": "I am data" });
 }
