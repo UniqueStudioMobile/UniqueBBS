@@ -19,7 +19,9 @@ void _newPage(Action action, Context<MainState> ctx) {
 }
 
 void _selectBoard(Action action, Context<MainState> ctx) {
-  Navigator.of(ctx.context).push(BoardDialog());
+  Navigator.of(ctx.context).push(BoardDialog(onSelect: () {
+    Navigator.pushNamed(ctx.context, BBSRoute.posting);
+  }));
 }
 
 void _selectPage(Action action, Context<MainState> ctx) {
