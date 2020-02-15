@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'state.dart';
 
 Widget buildView(ForumState state, Dispatch dispatch, ViewService viewService) {
-  return Container(
-    height: 500,
+  ListAdapter adapter = viewService.buildAdapter();
+  return ListView.builder(
+    itemBuilder: adapter.itemBuilder,
+    itemCount: adapter.itemCount,
   );
 }
